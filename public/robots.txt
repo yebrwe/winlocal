@@ -6,3 +6,4 @@ User-agent: Mediapartners-Google
 Allow: /
 
 Sitemap: https://winlocal.kr/sitemap-index.xml
+Sitemap: https://winlocal.kr/sitemap.xml
