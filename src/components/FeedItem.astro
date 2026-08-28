@@ -1,0 +1,24 @@
+---
+type Props = {
+  readonly href: string;
+  readonly date: Date;
+  readonly category: string;
+  readonly title: string;
+  readonly description: string;
+  readonly featured?: boolean;
+};
+
+const { href, date, category, title, description, featured = false } = Astro.props;
+const stamp = date.toISOString().slice(0, 10);
+---
+
+<a class:list={["feed-item", featured && "feed-item--featured"]} href={href}>
+  <div>
+    <div class="kicker">{stamp}</div>
+    <span class="tag">{category}</span>
+  </div>
+  <div>
+    <h2 class="feed-item__title">{title}</h2>
+    <p class="feed-item__dek">{description}</p>
+  </div>
+</a>
