@@ -1,0 +1,53 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="디자인 쇼케이스 — 윈로컬"
+  description="윈로컬 디자인 토큰과 프리미티브 상태 하니스. 공개 네비게이션에 두지 않습니다."
+  noindex
+>
+  <div class="reading showcase">
+    <h1 class="page-title">Primitives</h1>
+    <section>
+      <p class="kicker">Kicker / timestamp</p>
+      <p>2026-08-28</p>
+      <p><span class="tag">터미널</span></p>
+    </section>
+    <section>
+      <p class="kicker">Buttons</p>
+      <p>
+        <a class="btn" href="#primary">기본</a>
+        <a class="btn btn--ghost" href="#ghost">고스트</a>
+      </p>
+      <p>
+        <button class="btn" type="button">기본 버튼</button>
+        <button class="btn" type="button" disabled>비활성</button>
+      </p>
+    </section>
+    <section>
+      <p class="kicker">Kbd</p>
+      <p><kbd>Ctrl</kbd> + <kbd>C</kbd></p>
+    </section>
+    <section>
+      <p class="kicker">Field</p>
+      <div class="field">
+        <label for="demo">라벨</label>
+        <input id="demo" value="포커스해서 링 확인" />
+      </div>
+    </section>
+    <section>
+      <p class="kicker">Feed item</p>
+      <a class="feed-item" href="/">
+        <div>
+          <div class="kicker">2026-08-01</div>
+          <span class="tag">경로</span>
+        </div>
+        <div>
+          <h2 class="feed-item__title">호버하면 제목 색이 바뀝니다</h2>
+          <p class="feed-item__dek">카드 전체가 한 링크입니다.</p>
+        </div>
+      </a>
+    </section>
+  </div>
+</Base>
