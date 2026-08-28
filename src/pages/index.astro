@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import FeedItem from "../components/FeedItem.astro";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const featured = posts[0];
+const rest = posts.slice(1);
+---
+
+<Base
+  title="윈로컬 — Windows 로컬 개발 노트"
+  description="Windows에서 터미널, 경로, 패키지 매니저, 정적 사이트가 실제로 깨진 지점만 적습니다."
+>
+  <div class="reading">
+    <header class="masthead">
+      <p class="kicker">WINLOCAL // LOCAL NOTES</p>
+      <h1>Windows에서 로컬로 깨진 것만 적습니다</h1>
+      <p>
+        macOS 기준으로 쓰인 문서를 그대로 치면 안 되는 명령, PATH, 인코딩, 방어 소프트웨어.
+        이 사이트는 그 간극을 메우기 위한 실측 노트입니다.
+      </p>
+    </header>
+    <section class="feed" aria-label="노트 목록">
+      {
+        featured && (
+          <FeedItem
+            featured
+            href={`/notes/${featured.id}`}
+            date={featured.data.pubDate}
+            category={featured.data.category}
+            title={featured.data.title}
+            description={featured.data.description}
+          />
+        )
+      }
+      {
+        rest.map((post) => (
+          <FeedItem
+            href={`/notes/${post.id}`}
+            date={post.data.pubDate}
+            category={post.data.category}
+            title={post.data.title}
+            description={post.data.description}
+          />
+        ))
+      }
+    </section>
+  </div>
+</Base>
