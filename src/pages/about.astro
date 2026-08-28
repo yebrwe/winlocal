@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="소개 — 윈로컬"
+  description="윈로컬은 해피가 Windows에서 로컬 개발 도구가 깨지는 지점만 기록하는 1인 노트입니다."
+>
+  <article class="reading prose">
+    <h1 class="page-title">소개</h1>
+    <p>
+      윈로컬은 Windows에서 개발 도구를 쓰다 막힌 지점만 남기는 1인 노트입니다.
+      운영 필명은 <strong>해피</strong>입니다.
+    </p>
+    <p>
+      매일 쓰는 환경은 Windows입니다. 작업 루트는 <code>C:\workspaces</code>이고,
+      셸은 Git Bash와 PowerShell을 같이 엽니다. macOS나 Linux 문서를 그대로 치면
+      실패하는 명령을, 같은 명령을 이 환경에서 다시 실행해 보고 적습니다.
+    </p>
+    <h2>이 노트를 쓰는 이유</h2>
+    <p>
+      개발 문서는 대부분 Unix 경로와 <code>git</code>이 PATH에 있다는 전제로 시작합니다.
+      그 전제가 깨지면 에러 메시지가 본문과 달라서, 초보가 아니라 환경 문제입니다.
+      윈로컬은 그 차이를 한 번만 재현하고, 재현에 쓴 명령을 같이 공개합니다.
+    </p>
+    <h2>다루는 것</h2>
+    <ul>
+      <li>터미널: PowerShell, Git Bash, 코드 페이지, UTF-8</li>
+      <li>경로와 권한: 공백, 한글, 긴 PATH</li>
+      <li>패키지: Node, bun, npm이 한 머신에 있을 때</li>
+      <li>정적 사이트: 빌드된 HTML에 본문이 남는지</li>
+      <li>로컬 에이전트: 작업 디렉터리와 셸이 어긋날 때</li>
+    </ul>
+    <h2>다루지 않는 것</h2>
+    <p>
+      투자·건강 조언, 상품 나열, 제휴 링크 모음은 쓰지 않습니다.
+      실행해 보지 않은 명령도 올리지 않습니다.
+    </p>
+    <h2>연락</h2>
+    <p>
+      오류 제보와 정정은
+      <a href="mailto:crazyfou34@gmail.com">crazyfou34@gmail.com</a>
+      또는 <a href="/contact">문의</a>로 보내 주세요.
+    </p>
+  </article>
+</Base>

@@ -1,0 +1,38 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="문의 — 윈로컬"
+  description="윈로컬 운영자 해피에게 오류 제보나 정정 요청을 보냅니다. crazyfou34@gmail.com"
+>
+  <article class="reading prose">
+    <h1 class="page-title">문의</h1>
+    <p>
+      운영자 해피입니다. 글의 명령이 재현되지 않거나 틀린 부분이 있으면 메일로 알려 주세요.
+      광고·협찬 제안은 받지 않습니다.
+    </p>
+    <p>
+      수신 메일:
+      <a href="mailto:crazyfou34@gmail.com">crazyfou34@gmail.com</a>
+    </p>
+    <form class="prose" method="get" action="mailto:crazyfou34@gmail.com" enctype="text/plain">
+      <div class="field">
+        <label for="name">이름</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+      </div>
+      <div class="field">
+        <label for="email">회신 이메일</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+      </div>
+      <div class="field">
+        <label for="message">내용</label>
+        <textarea id="message" name="body" required></textarea>
+      </div>
+      <button class="btn" type="submit">메일 앱으로 보내기</button>
+    </form>
+    <p>
+      메일 앱이 안 열리면 위 주소로 직접 보내면 됩니다. 보통 며칠 안에 회신합니다.
+    </p>
+  </article>
+</Base>
