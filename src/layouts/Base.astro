@@ -23,6 +23,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="윈로컬 RSS"
+      href="/rss.xml"
+    />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link
@@ -64,6 +71,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           <a href="/contact">문의</a>
           <a href="/privacy">개인정보처리방침</a>
           <a href="/disclaimer">면책</a>
+          <a href="/rss.xml">RSS</a>
         </nav>
         <p>윈로컬 — Windows에서 로컬로 깨진 것만 적습니다.</p>
       </div>
